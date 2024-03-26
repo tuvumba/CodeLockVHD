@@ -1,0 +1,7 @@
+Running: xsim.dir/lockTest_vhdl_behav/xsimk.exe -simmode gui -wdb lockTest_vhdl_behav.wdb -simrunnum 0 -socket 51555
+Design successfully loaded
+Design Loading Memory Usage: 6372 KB (Peak: 6372 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7036 KB (Peak: 7036 KB)
+Simulation CPU Usage: 15 ms

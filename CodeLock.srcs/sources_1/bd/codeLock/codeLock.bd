@@ -1,0 +1,235 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x84858C18F8780260",
+      "device": "xc7a35tcpg236-1",
+      "name": "codeLock",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "button_vhdl_0": "",
+      "automata_vhdl_0": "",
+      "button_vhdl_1": "",
+      "button_vhdl_2": ""
+    },
+    "ports": {
+      "btn_a": {
+        "direction": "I"
+      },
+      "btn_b": {
+        "direction": "I"
+      },
+      "btn_c": {
+        "direction": "I"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      },
+      "unlock": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "button_vhdl_0": {
+        "vlnv": "xilinx.com:module_ref:button_vhdl:1.0",
+        "xci_name": "codeLock_button_vhdl_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "button_vhdl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          },
+          "hrana": {
+            "direction": "O"
+          }
+        }
+      },
+      "automata_vhdl_0": {
+        "vlnv": "xilinx.com:module_ref:automata_vhdl:1.0",
+        "xci_name": "codeLock_automata_vhdl_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "automata_vhdl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "c": {
+            "direction": "I"
+          },
+          "raw_a": {
+            "direction": "I"
+          },
+          "raw_b": {
+            "direction": "I"
+          },
+          "raw_c": {
+            "direction": "I"
+          },
+          "led0": {
+            "direction": "O"
+          },
+          "led1": {
+            "direction": "O"
+          },
+          "unlock": {
+            "direction": "O"
+          }
+        }
+      },
+      "button_vhdl_1": {
+        "vlnv": "xilinx.com:module_ref:button_vhdl:1.0",
+        "xci_name": "codeLock_button_vhdl_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "button_vhdl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          },
+          "hrana": {
+            "direction": "O"
+          }
+        }
+      },
+      "button_vhdl_2": {
+        "vlnv": "xilinx.com:module_ref:button_vhdl:1.0",
+        "xci_name": "codeLock_button_vhdl_2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "button_vhdl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "d": {
+            "direction": "I"
+          },
+          "hrana": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "btn_a_1": {
+        "ports": [
+          "btn_a",
+          "button_vhdl_0/d",
+          "automata_vhdl_0/raw_a"
+        ]
+      },
+      "btn_b_1": {
+        "ports": [
+          "btn_b",
+          "automata_vhdl_0/raw_b",
+          "button_vhdl_1/d"
+        ]
+      },
+      "btn_c_1": {
+        "ports": [
+          "btn_c",
+          "automata_vhdl_0/raw_c",
+          "button_vhdl_2/d"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "button_vhdl_0/clk",
+          "automata_vhdl_0/clk",
+          "button_vhdl_1/clk",
+          "button_vhdl_2/clk"
+        ]
+      },
+      "button_vhdl_0_hrana": {
+        "ports": [
+          "button_vhdl_0/hrana",
+          "automata_vhdl_0/a"
+        ]
+      },
+      "button_vhdl_1_hrana": {
+        "ports": [
+          "button_vhdl_1/hrana",
+          "automata_vhdl_0/b"
+        ]
+      },
+      "button_vhdl_2_hrana": {
+        "ports": [
+          "button_vhdl_2/hrana",
+          "automata_vhdl_0/c"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "automata_vhdl_0/reset"
+        ]
+      },
+      "automata_vhdl_0_led0": {
+        "ports": [
+          "automata_vhdl_0/led0",
+          "led0"
+        ]
+      },
+      "automata_vhdl_0_led1": {
+        "ports": [
+          "automata_vhdl_0/led1",
+          "led1"
+        ]
+      },
+      "automata_vhdl_0_unlock": {
+        "ports": [
+          "automata_vhdl_0/unlock",
+          "unlock"
+        ]
+      }
+    }
+  }
+}

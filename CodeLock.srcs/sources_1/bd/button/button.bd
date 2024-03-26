@@ -1,0 +1,99 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAA10730DAA10730D",
+      "device": "xc7a35tcpg236-1",
+      "name": "button",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dff_0": "",
+      "inv_0": "",
+      "and_0": "",
+      "debounce_0": ""
+    },
+    "ports": {
+      "hrana": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "d": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "dff_0": {
+        "vlnv": "FIT:user:dff:1.0",
+        "xci_name": "button_dff_0_0",
+        "parameters": {
+          "Reset": {
+            "value": "false"
+          }
+        }
+      },
+      "inv_0": {
+        "vlnv": "FIT:user:inv:1.0",
+        "xci_name": "button_inv_0_0"
+      },
+      "and_0": {
+        "vlnv": "FIT:user:and:1.0",
+        "xci_name": "button_and_0_0"
+      },
+      "debounce_0": {
+        "vlnv": "FIT:user:debounce:1.0",
+        "xci_name": "button_debounce_0_0"
+      }
+    },
+    "nets": {
+      "inv_0_O": {
+        "ports": [
+          "inv_0/O",
+          "and_0/I1"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "dff_0/clk",
+          "debounce_0/clk"
+        ]
+      },
+      "and_0_O": {
+        "ports": [
+          "and_0/O",
+          "hrana"
+        ]
+      },
+      "dff_0_q": {
+        "ports": [
+          "dff_0/q",
+          "inv_0/I"
+        ]
+      },
+      "d_1": {
+        "ports": [
+          "d",
+          "debounce_0/tl_in"
+        ]
+      },
+      "debounce_0_tl_out": {
+        "ports": [
+          "debounce_0/tl_out",
+          "dff_0/d",
+          "and_0/I0"
+        ]
+      }
+    }
+  }
+}

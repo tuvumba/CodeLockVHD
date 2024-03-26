@@ -1,0 +1,190 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAC1DDDB7BB89F950",
+      "device": "xc7a35tcpg236-1",
+      "name": "lockTest",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "gnd_0": "",
+      "code_lock_test_0": "",
+      "automata_vhdl_0": ""
+    },
+    "ports": {
+      "led0": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      },
+      "unlock": {
+        "direction": "O"
+      },
+      "resetLED": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "gnd_0": {
+        "vlnv": "FIT:user:gnd:1.0",
+        "xci_name": "lockTest_gnd_0_0"
+      },
+      "code_lock_test_0": {
+        "vlnv": "xilinx.com:module_ref:code_lock_test:1.0",
+        "xci_name": "lockTest_code_lock_test_0_0",
+        "parameters": {
+          "C_CODE": {
+            "value": "ACAB"
+          },
+          "C_FSM_TYPE": {
+            "value": "MEALY"
+          },
+          "C_TEST1": {
+            "value": "AACABCCA"
+          },
+          "C_TEST2": {
+            "value": "BACABACA"
+          },
+          "C_TEST3": {
+            "value": "NNACBACABA"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "code_lock_test",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clock": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "A": {
+            "direction": "O"
+          },
+          "B": {
+            "direction": "O"
+          },
+          "C": {
+            "direction": "O"
+          },
+          "Lock": {
+            "direction": "I"
+          }
+        }
+      },
+      "automata_vhdl_0": {
+        "vlnv": "xilinx.com:module_ref:automata_vhdl:1.0",
+        "xci_name": "lockTest_automata_vhdl_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "automata_vhdl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "c": {
+            "direction": "I"
+          },
+          "raw_a": {
+            "direction": "I"
+          },
+          "raw_b": {
+            "direction": "I"
+          },
+          "raw_c": {
+            "direction": "I"
+          },
+          "led0": {
+            "direction": "O"
+          },
+          "led1": {
+            "direction": "O"
+          },
+          "unlock": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "code_lock_test_0_Reset": {
+        "ports": [
+          "code_lock_test_0/Reset",
+          "resetLED",
+          "automata_vhdl_0/reset"
+        ]
+      },
+      "code_lock_test_0_A": {
+        "ports": [
+          "code_lock_test_0/A",
+          "automata_vhdl_0/a"
+        ]
+      },
+      "code_lock_test_0_B": {
+        "ports": [
+          "code_lock_test_0/B",
+          "automata_vhdl_0/b"
+        ]
+      },
+      "code_lock_test_0_C": {
+        "ports": [
+          "code_lock_test_0/C",
+          "automata_vhdl_0/c"
+        ]
+      },
+      "code_lock_test_0_Clock": {
+        "ports": [
+          "code_lock_test_0/Clock",
+          "automata_vhdl_0/clk"
+        ]
+      },
+      "gnd_0_O": {
+        "ports": [
+          "gnd_0/O",
+          "automata_vhdl_0/raw_a",
+          "automata_vhdl_0/raw_b",
+          "automata_vhdl_0/raw_c"
+        ]
+      },
+      "automata_vhdl_0_unlock": {
+        "ports": [
+          "automata_vhdl_0/unlock",
+          "unlock",
+          "code_lock_test_0/Lock"
+        ]
+      },
+      "automata_vhdl_0_led0": {
+        "ports": [
+          "automata_vhdl_0/led0",
+          "led0"
+        ]
+      },
+      "automata_vhdl_0_led1": {
+        "ports": [
+          "automata_vhdl_0/led1",
+          "led1"
+        ]
+      }
+    }
+  }
+}

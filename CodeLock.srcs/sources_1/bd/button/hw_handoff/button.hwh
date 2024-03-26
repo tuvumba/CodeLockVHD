@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr 21 00:31:49 2023" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.2" DEVICE="7a35t" NAME="button" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="hrana" SIGIS="data" SIGNAME="and_0_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="and_0" PORT="O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dff_0" PORT="clk"/>
+        <CONNECTION INSTANCE="debounce_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="External_Ports_d">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debounce_0" PORT="tl_in"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="100" FULLNAME="/and_0" HWVERSION="1.0" INSTANCE="and_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="and" VLNV="FIT:user:and:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="I0_inverted" VALUE="false"/>
+        <PARAMETER NAME="I1_inverted" VALUE="false"/>
+        <PARAMETER NAME="I2_inverted" VALUE="false"/>
+        <PARAMETER NAME="I3_inverted" VALUE="false"/>
+        <PARAMETER NAME="I4_inverted" VALUE="false"/>
+        <PARAMETER NAME="I5_inverted" VALUE="false"/>
+        <PARAMETER NAME="I6_inverted" VALUE="false"/>
+        <PARAMETER NAME="I7_inverted" VALUE="false"/>
+        <PARAMETER NAME="O_inverted" VALUE="false"/>
+        <PARAMETER NAME="Component_Name" VALUE="button_and_0_0"/>
+        <PARAMETER NAME="Inputs" VALUE="2"/>
+        <PARAMETER NAME="I0_Inverted" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="I0" SIGIS="data" SIGNAME="debounce_0_tl_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debounce_0" PORT="tl_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="I1" SIGIS="data" SIGNAME="inv_0_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="inv_0" PORT="O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="O" SIGIS="data" SIGNAME="and_0_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hrana"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="100" FULLNAME="/debounce_0" HWVERSION="1.0" INSTANCE="debounce_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debounce" VLNV="FIT:user:debounce:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width" VALUE="22"/>
+        <PARAMETER NAME="Component_Name" VALUE="button_debounce_0_1"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="synthesis.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tl_in" SIGIS="undef" SIGNAME="External_Ports_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tl_out" SIGIS="undef" SIGNAME="debounce_0_tl_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dff_0" PORT="d"/>
+            <CONNECTION INSTANCE="and_0" PORT="I0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="100" FULLNAME="/dff_0" HWVERSION="1.0" INSTANCE="dff_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dff" VLNV="FIT:user:dff:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="button_dff_0_0"/>
+        <PARAMETER NAME="CE" VALUE="false"/>
+        <PARAMETER NAME="Reset" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="d" SIGIS="data" SIGNAME="debounce_0_tl_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debounce_0" PORT="tl_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="q" SIGIS="data" SIGNAME="dff_0_q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="inv_0" PORT="I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="100" FULLNAME="/inv_0" HWVERSION="1.0" INSTANCE="inv_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inv" VLNV="FIT:user:inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="button_inv_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="I" SIGIS="undef" SIGNAME="dff_0_q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dff_0" PORT="q"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="O" SIGIS="undef" SIGNAME="inv_0_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="and_0" PORT="I1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,24 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port unlock -pg 1 -y 140 -defaultsOSRD
+preplace port resetLED -pg 1 -y 380 -defaultsOSRD
+preplace port led0 -pg 1 -y 300 -defaultsOSRD
+preplace port led1 -pg 1 -y 330 -defaultsOSRD
+preplace inst automata_vhdl_0 -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace inst gnd_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
+preplace inst code_lock_test_0 -pg 1 -lvl 1 -y 240 -defaultsOSRD
+preplace netloc code_lock_test_0_Reset 1 1 2 240 210 460
+preplace netloc automata_vhdl_0_unlock 1 0 3 10 140 NJ 140 470
+preplace netloc automata_vhdl_0_led0 1 2 1 450
+preplace netloc code_lock_test_0_Clock 1 1 1 230
+preplace netloc code_lock_test_0_A 1 1 1 250
+preplace netloc automata_vhdl_0_led1 1 2 1 480
+preplace netloc code_lock_test_0_B 1 1 1 220
+preplace netloc code_lock_test_0_C 1 1 1 210
+preplace netloc gnd_0_O 1 1 1 250
+levelinfo -pg 1 -10 110 350 500 -top 0 -bot 470
+"
+}
+0

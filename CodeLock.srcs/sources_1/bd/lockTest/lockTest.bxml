@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="36">
+  <CompositeFile CompositeFileTopName="lockTest" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1682071202"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1682071202"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1682071202"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1682071202"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\lockTest_code_lock_test_0_0\lockTest_code_lock_test_0_0.xci" Type="IP">
+        <Instance HierarchyPath="code_lock_test_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\lockTest_automata_vhdl_0_0\lockTest_automata_vhdl_0_0.xci" Type="IP">
+        <Instance HierarchyPath="automata_vhdl_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\lockTest_gnd_0_0\lockTest_gnd_0_0.xci" Type="IP">
+        <Instance HierarchyPath="gnd_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

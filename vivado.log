@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 21 06:26:17 2023
+# Process ID: 1348
+# Current directory: D:/Vivado/CodeLock
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16468 D:\Vivado\CodeLock\CodeLock.xpr
+# Log file: D:/Vivado/CodeLock/vivado.log
+# Journal file: D:/Vivado/CodeLock\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/CodeLock/CodeLock.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/lib_SAP_2022_02_02'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:08 . Memory (MB): peak = 730.020 ; gain = 133.930
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 21 06:27:05 2023...

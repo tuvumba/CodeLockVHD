@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 21 11:34:51 2023
+# Process ID: 8476
+# Current directory: X:/Documents/CodeLock/CodeLock.runs/impl_1
+# Command line: vivado.exe -log codeLock_vhdl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source codeLock_vhdl.tcl -notrace
+# Log file: X:/Documents/CodeLock/CodeLock.runs/impl_1/codeLock_vhdl.vdi
+# Journal file: X:/Documents/CodeLock/CodeLock.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source codeLock_vhdl.tcl -notrace

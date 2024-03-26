@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CodeLock.ip_user_files/bd/button/ipshared/ba21/dff.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ip/button_dff_0_0/sim/button_dff_0_0.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ipshared/8af0/inv.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ip/button_inv_0_0/sim/button_inv_0_0.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ipshared/2d02/and_gate.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ip/button_and_0_0/sim/button_and_0_0.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ipshared/609b/debounce.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/ip/button_debounce_0_1/sim/button_debounce_0_1.vhd" \
+"../../../../CodeLock.ip_user_files/bd/button/sim/button.vhd" \
+"../../../../CodeLock.srcs/sources_1/imports/tmp/button.vhd" \
+"../../../../CodeLock.srcs/sim_1/imports/MozillaDownloads/tb_EdgeDetector.vhd" \
+
+# Do not sort compile order
+nosort

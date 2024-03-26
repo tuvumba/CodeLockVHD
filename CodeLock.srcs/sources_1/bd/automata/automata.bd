@@ -1,0 +1,335 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x89E6D3D389E6D3D3",
+      "device": "xc7a35tcpg236-1",
+      "name": "automata",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dff_0": "",
+      "dff_1": "",
+      "or_0": "",
+      "xor_0": "",
+      "or_1": "",
+      "and_0": "",
+      "debounce_0": "",
+      "debounce_1": "",
+      "debounce_2": "",
+      "dff_2": "",
+      "next_state_logic_0": ""
+    },
+    "ports": {
+      "raw_a": {
+        "direction": "I"
+      },
+      "raw_b": {
+        "direction": "I"
+      },
+      "raw_c": {
+        "direction": "I"
+      },
+      "a": {
+        "direction": "I"
+      },
+      "b": {
+        "direction": "I"
+      },
+      "c": {
+        "direction": "I"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "unlock": {
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "led0": {
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "led1": {
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "reset": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "dff_0": {
+        "vlnv": "FIT:user:dff:1.0",
+        "xci_name": "automata_dff_0_0"
+      },
+      "dff_1": {
+        "vlnv": "FIT:user:dff:1.0",
+        "xci_name": "automata_dff_1_0"
+      },
+      "or_0": {
+        "vlnv": "FIT:user:or:1.0",
+        "xci_name": "automata_or_0_0"
+      },
+      "xor_0": {
+        "vlnv": "FIT:user:xor:1.0",
+        "xci_name": "automata_xor_0_1",
+        "parameters": {
+          "Inputs": {
+            "value": "3"
+          },
+          "O_inverted": {
+            "value": "true"
+          }
+        }
+      },
+      "or_1": {
+        "vlnv": "FIT:user:or:1.0",
+        "xci_name": "automata_or_1_0",
+        "parameters": {
+          "Inputs": {
+            "value": "3"
+          }
+        }
+      },
+      "and_0": {
+        "vlnv": "FIT:user:and:1.0",
+        "xci_name": "automata_and_0_0"
+      },
+      "debounce_0": {
+        "vlnv": "FIT:user:debounce:1.0",
+        "xci_name": "automata_debounce_0_0"
+      },
+      "debounce_1": {
+        "vlnv": "FIT:user:debounce:1.0",
+        "xci_name": "automata_debounce_1_0"
+      },
+      "debounce_2": {
+        "vlnv": "FIT:user:debounce:1.0",
+        "xci_name": "automata_debounce_2_0"
+      },
+      "dff_2": {
+        "vlnv": "FIT:user:dff:1.0",
+        "xci_name": "automata_dff_2_0",
+        "parameters": {
+          "Reset": {
+            "value": "true"
+          }
+        }
+      },
+      "next_state_logic_0": {
+        "vlnv": "xilinx.com:module_ref:next_state_logic:1.0",
+        "xci_name": "automata_next_state_logic_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "next_state_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "c": {
+            "direction": "I"
+          },
+          "q0": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "q1": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "qout": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "d0": {
+            "direction": "O"
+          },
+          "d1": {
+            "direction": "O"
+          },
+          "dout": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "next_state_logic_0_d0": {
+        "ports": [
+          "next_state_logic_0/d0",
+          "dff_0/d"
+        ]
+      },
+      "next_state_logic_0_d1": {
+        "ports": [
+          "next_state_logic_0/d1",
+          "dff_1/d"
+        ]
+      },
+      "dff_0_q": {
+        "ports": [
+          "dff_0/q",
+          "led0",
+          "next_state_logic_0/q0"
+        ]
+      },
+      "dff_1_q": {
+        "ports": [
+          "dff_1/q",
+          "led1",
+          "next_state_logic_0/q1"
+        ]
+      },
+      "a_1": {
+        "ports": [
+          "a",
+          "next_state_logic_0/a"
+        ]
+      },
+      "b_1": {
+        "ports": [
+          "b",
+          "next_state_logic_0/b"
+        ]
+      },
+      "c_1": {
+        "ports": [
+          "c",
+          "next_state_logic_0/c"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "dff_0/clk",
+          "dff_1/clk",
+          "debounce_2/clk",
+          "debounce_1/clk",
+          "debounce_0/clk",
+          "dff_2/clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "or_0/I1"
+        ]
+      },
+      "or_0_O": {
+        "ports": [
+          "or_0/O",
+          "dff_0/reset",
+          "dff_1/reset",
+          "dff_2/reset"
+        ]
+      },
+      "xor_0_O": {
+        "ports": [
+          "xor_0/O",
+          "and_0/I0"
+        ]
+      },
+      "and_0_O": {
+        "ports": [
+          "and_0/O",
+          "or_0/I0"
+        ]
+      },
+      "raw_a_1": {
+        "ports": [
+          "raw_a",
+          "debounce_0/tl_in"
+        ]
+      },
+      "raw_b_1": {
+        "ports": [
+          "raw_b",
+          "debounce_1/tl_in"
+        ]
+      },
+      "raw_c_1": {
+        "ports": [
+          "raw_c",
+          "debounce_2/tl_in"
+        ]
+      },
+      "debounce_0_tl_out": {
+        "ports": [
+          "debounce_0/tl_out",
+          "xor_0/I0",
+          "or_1/I0"
+        ]
+      },
+      "debounce_1_tl_out": {
+        "ports": [
+          "debounce_1/tl_out",
+          "xor_0/I1",
+          "or_1/I1"
+        ]
+      },
+      "debounce_2_tl_out": {
+        "ports": [
+          "debounce_2/tl_out",
+          "xor_0/I2",
+          "or_1/I2"
+        ]
+      },
+      "dff_2_q": {
+        "ports": [
+          "dff_2/q",
+          "unlock",
+          "next_state_logic_0/qout"
+        ]
+      },
+      "next_state_logic_0_dout": {
+        "ports": [
+          "next_state_logic_0/dout",
+          "dff_2/d"
+        ]
+      },
+      "or_1_O": {
+        "ports": [
+          "or_1/O",
+          "and_0/I1"
+        ]
+      }
+    }
+  }
+}

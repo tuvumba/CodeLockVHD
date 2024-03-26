@@ -1,0 +1,26 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+### Simulation start ###
+FSM_TYPE: MEALY
+
+** Test:  ACAB
+A C A B 
+0 0 0 1 
+A C A B 
+
+** Test:  AACABCCA
+A A C A B C C A 
+0 0 0 0 0 0 0 0 
+- A C A B - - - 
+
+** Test:  BACABACA
+B A C A B A C A 
+0 0 0 0 1 0 0 0 
+- A C A B - - - 
+
+** Test:  NNACBACABA
+N N A C B A C A B A 
+0 0 0 0 0 0 0 0 1 0 
+- - - - - A C A B - 
+
+### Simulation finished ###

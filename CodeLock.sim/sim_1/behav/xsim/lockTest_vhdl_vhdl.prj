@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CodeLock.srcs/sources_1/imports/tmp/automata.vhd" \
+"../../../../CodeLock.srcs/sources_1/imports/MozillaDownloads/l6_code_lock_test.vhd" \
+"../../../../CodeLock.srcs/sources_1/imports/MozillaDownloads/next_state_logic.vhd" \
+"../../../../CodeLock.srcs/sources_1/imports/MozillaDownloads/output_logic.vhd" \
+"../../../../CodeLock.srcs/sources_1/imports/tmp/lockTest.vhd" \
+
+# Do not sort compile order
+nosort
